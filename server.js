@@ -25,12 +25,12 @@ app.post("/dream", async (req, res) => {
     const prompt = req.body.prompt;
     
     try {
-        const aiResponse = await openai.createImage({
+        const aiResponse = await openai.images.generate({
             prompt,
             n: 1,
             size: "1024x1024",
         });
-        const image = aiResponse.data.data[0].url;
+        const image = aiResponse.data[0].url;
         res.send({ image }); // send image back to client
     } catch (error) { // error handling
         if (error.response) {
