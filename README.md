@@ -29,7 +29,7 @@ follows:
 OPENAI=****************************
 ```
 
-### Start express server and run the program
+### Start express server and app
 
 To start the *express server*, type in the following command:
 
@@ -37,6 +37,8 @@ To start the *express server*, type in the following command:
 node server.js
 ```
 
-### Open the web application
+To start the *app*, type in the following command:
 
-Open your web browser at http://localhost:8080/
+```
+npm run dev
+```
