@@ -36,6 +36,7 @@ app.post("/dream", async (req, res) => {
         if (error.response) {
             console.log(error.response.status);
             console.log(error.response.data);
+            res.status(500).send(error?.response.data.error.message || "Something went wrong");
         } else {
             console.log(error.message);
         }
